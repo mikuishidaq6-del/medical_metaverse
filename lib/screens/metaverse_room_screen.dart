@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
 class MetaverseRoomScreen extends StatelessWidget {
+  final String diseaseType;
+
+  const MetaverseRoomScreen({Key? key, required this.diseaseType}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Metaverse Room'),
+        title: Text('メタバースルーム ($diseaseType)'),
+        centerTitle: true,
       ),
       body: Center(
         child: Stack(
