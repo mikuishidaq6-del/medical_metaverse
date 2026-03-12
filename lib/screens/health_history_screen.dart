@@ -90,8 +90,7 @@ class _HealthHistoryScreenState extends State<HealthHistoryScreen> {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      '最近体調が改善されているようですね。これまでの頑張りが報われています。
-引き続き、無理のない範囲でお過ごしください。',
+                      '最近体調が改善されているようですね。これまでの頑張りが報われています。引き続き、無理のない範囲でお過ごしください。',
                     ),
                   ],
                 ),

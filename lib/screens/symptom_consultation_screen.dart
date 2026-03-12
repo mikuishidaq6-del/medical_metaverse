@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
 class SymptomConsultationScreen extends StatelessWidget {
+  const SymptomConsultationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Symptom Consultation'),
+        title: const Text('Symptom Consultation'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            TextField(
+            const TextField(
               decoration: InputDecoration(labelText: 'Enter your symptoms'),
               maxLines: 3,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Logic for symptom analysis and danger detection goes here
@@ -27,7 +29,7 @@ class SymptomConsultationScreen extends StatelessWidget {
                   showNormalConsultation(context);
                 }
               },
-              child: Text('Consult'),
+              child: const Text('Consult'),
             ),
           ],
         ),
@@ -39,11 +41,11 @@ class SymptomConsultationScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Danger Alert'),
-        content: Text('Your symptoms indicate a potential emergency. Please seek immediate medical attention.'),
+        title: const Text('Danger Alert'),
+        content: const Text('Your symptoms indicate a potential emergency. Please seek immediate medical attention.'),
         actions: <Widget>[
           TextButton(
-            child: Text('OK'),
+            child: const Text('OK'),
             onPressed: () => Navigator.of(context).pop(),
           ),
         ],
@@ -55,11 +57,11 @@ class SymptomConsultationScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Normal Consultation'),
-        content: Text('Your symptoms appear to be non-critical. Please consult a healthcare provider if symptoms persist.'),
+        title: const Text('Normal Consultation'),
+        content: const Text('Your symptoms appear to be non-critical. Please consult a healthcare provider if symptoms persist.'),
         actions: <Widget>[
           TextButton(
-            child: Text('OK'),
+            child: const Text('OK'),
             onPressed: () => Navigator.of(context).pop(),
           ),
         ],
